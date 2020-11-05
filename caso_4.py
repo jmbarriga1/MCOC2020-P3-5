@@ -3,7 +3,7 @@ from matplotlib import cm
 
 
 # Definiciones geometricas
-a = 1.     #alto del dominio
+a = 1     #alto del dominio
 b = 0.5     #ancho del dominio
 
 Nx = 15    #numero de intervalos en X
@@ -30,7 +30,7 @@ print("x: ",x)
 print("y: ",y)
 
 def imshowbien(u):
-    imshow(u.T[Nx::-1,:],cmap=cm.coolwarm, interpolation='bilinear')
+    imshow(u.T[Ny::-1,:],cmap=cm.coolwarm, interpolation='bilinear')
     cbar = colorbar(extend='both', cmap=cm.coolwarm)
     ticks = arange(0,35,5)
     ticks_Text=["{}°".format(deg) for deg in ticks]
